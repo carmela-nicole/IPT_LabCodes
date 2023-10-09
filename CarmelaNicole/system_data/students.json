@@ -1,0 +1,17 @@
+[
+    {
+    "name":"Kim Sunoo",
+    "age":19,
+    "address":"Seoul"
+    },
+    {
+        "name":"Park Jongseung",
+        "age":20,
+        "address":"America"
+    },
+    {
+        "name":"Sim Jaeyun",
+        "age":20,
+        "address":"Australia"
+    }
+]

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<students>
+    <student>
+        <name>Kim Sunoo</name>
+        <age>19</age>
+        <address>Seoul</address>
+    </student>
+    <student>
+        <name>Park Jongseung</name>
+        <age>21</age>
+        <address>America</address>
+    </student>
+    <student>
+        <name>Sim Jaeyun</name>
+        <age>20</age>
+        <address>Australia</address>
+    </student>
+</students>
