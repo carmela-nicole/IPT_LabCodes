@@ -39,7 +39,7 @@
     $json = file_get_contents("http://localhost/CarmelaNicole/system_data/students.json");
     $json = json_decode($json);
     ?>
-
+        <!-- XML DATA IN TABLE -->
     <table border="2">
         <thead>
             <tr>
@@ -50,18 +50,40 @@
         </thead>
 
         <tbody>
-           <?php 
-            foreach($students as $student){
-                echo '<tr>';
-                    echo '<td>'.$student->name.'</td>';
-                    echo '<td>'.$student->age.'</td>';
-                    echo '<td>'.$student->address.'</td>';
-                echo '</tr>';
-            }
+           <!-- <?php 
+            // foreach($students as $student){
+            //     echo '<tr>';
+            //         echo '<td>'.$student->name.'</td>';
+            //         echo '<td>'.$student->age.'</td>';
+            //         echo '<td>'.$student->address.'</td>';
+            //     echo '</tr>';
+            // }
 
-           ?>
+           ?> -->
         </tbody>
     </table>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"> </script>
+    <script>
+            $.ajax({
+                url:"http://localhost/CarmelaNicole/system_data/students.json",
+                type:"get",
+                dataType:"json",
+                success:function(e){
+                    var html=''
+                    $(e).each(function(k,v){
+                        html+='<tr>'
+                            html+='<td>'+v.name+ '</td>'
+                            html+='<td>'+v.age+ '</td>'
+                            html+='<td>'+v.address+ '</td>'
+                        html+='</tr>'
+                    })
+
+                $('tbody').html(html)
+                }
+            })
+    </script>
 
 </body>
 </html>
